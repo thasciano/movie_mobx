@@ -1,24 +1,20 @@
 import 'package:mobx/mobx.dart';
-
+part 'controller.g.dart';
 ///
 /// Created by Thasciano Carvalho on 08/01/2020.
 /// thasciano@gmail.com
 ///
-class Controller{
-  var _counter = Observable(0);
-  int get counter => _counter.value;
-  set counter(int newValue) => _counter.value = newValue;
+/// flutter pub run build_runner build
+///
 
-  Action increment;
+class Controller = ControllerBase with _$Controller;
 
-  Controller(){
-    increment = Action(_increment);
-    autorun((_){
-      print(counter);
-    });
-  }
+abstract class ControllerBase with Store {
+  @observable
+  int counter = 0;
 
-  _increment(){
+  @action
+  increment(){
     counter++;
   }
 }

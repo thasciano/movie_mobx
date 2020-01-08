@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:movie_mobx/controller.dart';
@@ -31,7 +32,8 @@ class HomePage extends StatelessWidget {
                   style: Theme.of(context).textTheme.display1,
                 );
               },
-            )
+            ),
+
           ],
         ),
       ),
