@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_mobx/formulario/cliente_controller.dart';
+import 'package:movie_mobx/lista/lista_controller.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 
@@ -16,7 +17,10 @@ class MyApp extends StatelessWidget {
         Provider<ClienteController>(
           create: (context) => ClienteController(),
           dispose: (_, controller)=>controller.dispose(),
-        )
+        ),
+//        Provider<ListaController>(
+//          create: (context) => ListaController(),
+//        )
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

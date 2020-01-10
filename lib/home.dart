@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_mobx/formulario/cadastro.dart';
 import 'package:movie_mobx/controller.dart';
+import 'package:movie_mobx/lista/list_page.dart';
+import 'package:movie_mobx/lista/list_page.dart';
 import 'package:movie_mobx/login.dart';
+
 
 
 ///
@@ -46,8 +49,16 @@ class HomePage extends StatelessWidget {
                   );
                 },
                 child: Text('Cadastro'),
+              ),
+              RaisedButton(
+                onPressed: (){
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ListaPage()),
+                  );
+                },
+                child: Text('Lista'),
               )
-
             ],
           ),
         ),
